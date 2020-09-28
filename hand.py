@@ -107,7 +107,6 @@ class Player(Hand):
                     else:
                         self.base_bet += bet
                         self.bank -= bet
-                        self.ddown = True
                         return True
                 elif double_down == 2:
                     get_double_down_response = False
