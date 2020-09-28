@@ -93,22 +93,6 @@ class Player(Hand):
             except:
                 ValueError
 
-    def lucky_pair(self):
-        get_lucky_pair_bet = True
-        while get_lucky_pair_bet:
-            try:
-                print("You have$ $", self.bank)
-                lucky_bet = int(input("How much would you like to bet on the lucky pair bet?"))
-                if lucky_bet == 0:
-                    get_lucky_pair_bet = False
-                elif self.check_bet(lucky_bet):
-                    self.lucky_pair_bet = lucky_bet
-                    self.bank -= lucky_bet
-                    get_lucky_pair_bet = False
-                else:
-                    get_lucky_pair_bet = False
-            except:
-                ValueError
 
     def double_down(self, bet):  
         get_double_down_response = True
